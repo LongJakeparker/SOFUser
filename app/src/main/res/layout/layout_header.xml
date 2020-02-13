@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/collapsingToolBar"
+        style="@style/Widget.SOFUser.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/Widget.SOFUser.Toolbar"
+        app:contentScrim="@android:color/white"
+        app:expandedTitleGravity="bottom"
+        app:expandedTitleMarginBottom="@dimen/padding_m"
+        app:expandedTitleMarginStart="@dimen/padding_m"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+        app:title="@string/app_name">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appBar"
+            style="@style/Widget.SOFUser.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/Widget.SOFUser.Toolbar"
+            app:layout_collapseMode="pin" />
+
+        <ImageView
+            android:id="@+id/ivDividerTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white" />
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+</com.google.android.material.appbar.AppBarLayout>

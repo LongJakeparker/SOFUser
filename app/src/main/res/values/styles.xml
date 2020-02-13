@@ -1,11 +1,39 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:colorControlNormal">@color/colorTextPrimary</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
+
+    <style name="Widget.SOFUser.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@android:color/white</item>
+        <item name="actionMenuTextColor">@color/colorAccent</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+    </style>
+
+    <style name="TextAppearance.SOFUser.Title" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Shikomel.Title.Expand" parent="TextAppearance.SOFUser.Title">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="TextAppearance.Shikomel.Title.Collapse" parent="TextAppearance.SOFUser.Title">
+        <item name="android:textSize">16sp</item>
     </style>
 
 </resources>
