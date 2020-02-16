@@ -10,8 +10,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.lifecycle.LifecycleOwner
 import com.example.sofuser.R
-import com.example.sofuser.Util.DialogUtil
+import com.example.sofuser.util.DialogUtil
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.CollapsingToolbarLayout
 
@@ -24,8 +25,8 @@ abstract class BaseActivity : AppCompatActivity(), Contract.View {
 
     protected abstract fun getLayoutId(): Int
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(getLayoutId())
 
         mToolBar = findViewById(R.id.appBar)
@@ -133,6 +134,14 @@ abstract class BaseActivity : AppCompatActivity(), Contract.View {
         clickListener: DialogInterface.OnClickListener?
     ) {
         showMessage(message, clickListener)
+    }
+
+    override fun isDestroy(): Boolean {
+        return isDestroyed
+    }
+
+    override fun getLifecycleOwner(): LifecycleOwner {
+        return this
     }
 
 }

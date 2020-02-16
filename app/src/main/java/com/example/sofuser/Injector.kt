@@ -1,6 +1,11 @@
 package com.example.sofuser
 
 import android.content.Context
+import com.example.sofuser.api.ApiClient
+import com.example.sofuser.mapper.UserEntityMapper
+import com.example.sofuser.mapper.UserEntityMapperImpl
+import com.example.sofuser.repository.ExceptionRepository
+import com.example.sofuser.repository.ExceptionRepositoryImpl
 import com.example.sofuser.repository.UserRepository
 import com.example.sofuser.repository.UserRepositoryImpl
 import com.example.sofuser.view.MainContract
@@ -17,7 +22,7 @@ class Injector constructor(val context: Context) {
     }
 
     private fun provideUserRepository(): UserRepository {
-        return UserRepositoryImpl(provideExceptionRepository(), provideApiClient(), provideRestaurantEntityMapper())
+        return UserRepositoryImpl(provideApiClient(), provideExceptionRepository(), provideUserEntityMapper())
     }
 
     private fun provideExceptionRepository(): ExceptionRepository {
@@ -25,6 +30,10 @@ class Injector constructor(val context: Context) {
     }
 
     private fun provideApiClient(): ApiClient {
-        return ApiClient(context, provideUserManager())
+        return ApiClient(context)
+    }
+
+    private fun provideUserEntityMapper(): UserEntityMapper {
+        return UserEntityMapperImpl()
     }
 }

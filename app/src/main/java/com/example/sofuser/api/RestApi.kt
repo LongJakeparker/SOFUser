@@ -1,13 +1,16 @@
 package com.example.sofuser.api
 
+import com.example.sofuser.entity.response.UserEntity
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
+import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface RestApi {
 
-    @FormUrlEncoded
-    @POST("functions/m_userLogin")
-    fun login(@Field(ApiKey.USER_NAME) email: String?, @Field(ApiKey.PASSWORD) passWord: String?): Call<BaseEntity<RestaurantEntity>>
+    @GET("users")
+    fun getListUser(
+        @Query(ApiKey.PAGE) page: Int?,
+        @Query(ApiKey.PAGESIZE) pageSize: Int? = 10,
+        @Query(ApiKey.SITE) site: String? = "stackoverflow"
+    ): Call<BaseEntity<ArrayList<UserEntity>>>
 }

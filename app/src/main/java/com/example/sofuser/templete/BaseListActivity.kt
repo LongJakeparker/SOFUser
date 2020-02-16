@@ -2,7 +2,6 @@ package com.example.sofuser.templete
 
 import android.os.Bundle
 import android.os.Handler
-import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sofuser.R
@@ -45,7 +44,6 @@ abstract class BaseListActivity: BaseActivity(), BaseListContract.View, ItemRecy
         rvContent?.setHasFixedSize(true)
         rvContent?.layoutManager = mLayoutManager
         rvContent.addOnScrollListener(mLoadMoreListener)
-//        rvContent.itemAnimator = null
         srlContent?.setOnRefreshListener {
             reload()
         }
@@ -117,17 +115,12 @@ abstract class BaseListActivity: BaseActivity(), BaseListContract.View, ItemRecy
         } else {
             if (data.isEmpty()) {
             } else {
-                hideNoDataDescription()
                 mAdapter.updateData(data)
             }
         }
         if (data.size < mPageLimitNumber) {
             setLoadMoreStatus(false)
         }
-    }
-
-    private fun hideNoDataDescription() {
-        llEmptyData?.visibility = View.GONE
     }
 
     private fun setRefreshing(isRefreshing: Boolean) {

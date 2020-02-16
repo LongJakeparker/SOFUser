@@ -14,7 +14,6 @@ class ApiClient constructor(context: Context){
 
     init {
         val httpClient = OkHttpClient.Builder()
-//        httpClient.addInterceptor(MockClient(context))
         httpClient.addInterceptor { chain ->
             val original = chain.request()
             val request = original.newBuilder()

@@ -1,13 +1,13 @@
 package com.example.sofuser.view
 
-import com.example.sofuser.templete.Contract
+import com.example.sofuser.templete.BaseListContract
 
 interface MainContract {
-    interface View: Contract.View {
-        fun moveToReputationHistoryDetailScreen(orderId: String?)
+    interface View : BaseListContract.View {
+        fun moveToReputationHistoryDetailScreen(userId: Int?)
     }
 
-    interface UserActionsListener: Contract.UserActionsListener<View> {
-        fun loadData()
+    interface UserActionsListener : BaseListContract.UserActionsListener<View> {
+
     }
 }

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SOF User</string>
+    <string name="message_network_connection_failed">Please check your network and try again.</string>
+    <string name="title_user_list">Users</string>
 </resources>

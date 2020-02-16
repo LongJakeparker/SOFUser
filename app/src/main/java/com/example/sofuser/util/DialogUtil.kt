@@ -1,4 +1,4 @@
-package com.example.sofuser.Util
+package com.example.sofuser.util
 
 import android.app.Dialog
 import android.content.Context

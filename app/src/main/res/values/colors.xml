@@ -9,4 +9,6 @@
 
     <color name="azure">#00a3df</color>
     <color name="sap_green">#3e8914</color>
+    <color name="darkTurquoise">#095255</color>
+    <color name="putty">#b0aca8</color>
 </resources>

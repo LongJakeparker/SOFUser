@@ -5,5 +5,5 @@ import com.example.sofuser.model.User
 import com.example.sofuser.templete.Resource
 
 interface UserRepository {
-    fun getListUser(email: String, password: String): LiveData<Resource<User>>
+    fun getListUser(page: Int): LiveData<Resource<ArrayList<User>>>
 }

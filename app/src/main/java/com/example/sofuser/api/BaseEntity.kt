@@ -11,7 +11,7 @@ open class BaseEntity<T> {
     @SerializedName("error")
     private var message: String? = null
 
-    @SerializedName("result")
+    @SerializedName("items")
     private var result: T? = null
 
     fun getCode(): Int? {
