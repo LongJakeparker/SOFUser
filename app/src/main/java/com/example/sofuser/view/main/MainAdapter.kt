@@ -1,4 +1,4 @@
-package com.example.sofuser.view
+package com.example.sofuser.view.main
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -19,6 +19,8 @@ class MainAdapter constructor(layoutManager: RecyclerView.LayoutManager): BaseRe
         return MainViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 R.layout.item_user_list, parent,
-                false), mCallBack)
+                false
+            ), mCallBack
+        )
     }
 }

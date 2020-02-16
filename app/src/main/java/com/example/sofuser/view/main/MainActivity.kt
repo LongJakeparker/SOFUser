@@ -1,12 +1,16 @@
-package com.example.sofuser.view
+package com.example.sofuser.view.main
 
+import android.content.Intent
 import android.os.Bundle
+import com.example.sofuser.Constant
 import com.example.sofuser.R
 import com.example.sofuser.SOFUserApplication
 import com.example.sofuser.templete.BaseListActivity
 import com.example.sofuser.templete.BaseRecyclerAdapter
+import com.example.sofuser.view.reputation_history.ReputationHistoryActivity
 
-class MainActivity : BaseListActivity(), MainContract.View {
+class MainActivity : BaseListActivity(),
+    MainContract.View {
     private val presenter = SOFUserApplication.getInjector().provideMainPresenter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +19,8 @@ class MainActivity : BaseListActivity(), MainContract.View {
     }
 
     override fun getAdapter(): BaseRecyclerAdapter {
-        val adapter = MainAdapter(getLayoutManager())
+        val adapter =
+            MainAdapter(getLayoutManager())
         adapter.setCallBack(presenter)
         return adapter
     }
@@ -38,7 +43,9 @@ class MainActivity : BaseListActivity(), MainContract.View {
     }
 
     override fun moveToReputationHistoryDetailScreen(userId: Int?) {
-
+        val intent = Intent(this, ReputationHistoryActivity::class.java)
+        intent.putExtra(Constant.EXTRA_USER_ID, userId)
+        startActivity(intent)
     }
 
     override fun onDestroy() {

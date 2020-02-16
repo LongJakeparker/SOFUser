@@ -16,4 +16,8 @@ object ApiKey {
     const val PAGE = "page"
     const val PAGESIZE = "pagesize"
     const val SITE = "site"
+    const val REPUTATION_HISTORY_TYPE = "reputation_history_type"
+    const val REPUTATION_CHANGE = "reputation_change"
+    const val POST_ID = "post_id"
+    const val CREATION_DATE = "creation_date"
 }

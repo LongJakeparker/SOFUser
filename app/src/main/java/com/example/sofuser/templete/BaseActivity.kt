@@ -54,7 +54,6 @@ abstract class BaseActivity : AppCompatActivity(), Contract.View {
     protected open fun initToolbarNav() {
         mCollapsingToolbarLayout?.setCollapsedTitleTextAppearance(R.style.TextAppearance_Shikomel_Title_Collapse)
         mCollapsingToolbarLayout?.setExpandedTitleTextAppearance(R.style.TextAppearance_Shikomel_Title_Expand)
-        appBarLayout?.outlineProvider = null
 
         if (appBarLayout?.layoutParams != null) {
             val params = appBarLayout?.layoutParams as CoordinatorLayout.LayoutParams

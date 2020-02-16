@@ -6,5 +6,5 @@ data class User(
     val userAvatar: String? = null,
     val reputation: Int? = null,
     val location: String? = null,
-    val lastAccessDate: Int? = null
+    val lastAccessDate: Long? = null
 )

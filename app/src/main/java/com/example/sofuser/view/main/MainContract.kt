@@ -1,4 +1,4 @@
-package com.example.sofuser.view
+package com.example.sofuser.view.main
 
 import com.example.sofuser.templete.BaseListContract
 

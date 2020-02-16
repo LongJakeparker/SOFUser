@@ -4,15 +4,16 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/padding_m">
+    android:padding="@dimen/padding_m"
+    android:id="@+id/root">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivUserAvatar"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/ic_launcher_background"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#FFFFFFFF"/>
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/putty"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +26,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size_medium"
-            android:text="Jon Skeet"
             android:textColor="@android:color/black"/>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -34,28 +34,25 @@
             android:layout_height="wrap_content"
             android:textColor="@color/darkTurquoise"
             android:textSize="@dimen/text_size_default"
-            android:text="1163645"
             android:textStyle="bold"
-            android:drawableLeft="@drawable/ic_reputation"
+            android:drawableStart="@drawable/ic_reputation_green"
             android:gravity="center_vertical"
             android:drawablePadding="@dimen/padding_xs"
-            android:drawableTint="@color/darkTurquoise"/>
+            android:layout_marginTop="@dimen/padding_xs"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size_small"
-            android:textColor="@color/putty"
-            android:text="Reading, United Kingdom"/>
+            android:textColor="@color/putty"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvLastAccessDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size_small"
-            android:textColor="@color/putty"
-            android:text="Last access: Aug 16, 2018 at 8:30"/>
+            android:textColor="@color/putty"/>
 
     </LinearLayout>
 

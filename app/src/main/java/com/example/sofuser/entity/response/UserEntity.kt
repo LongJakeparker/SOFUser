@@ -20,5 +20,5 @@ data class UserEntity(
     val location: String?,
 
     @SerializedName(ApiKey.LAST_ACCESS_DATE)
-    val lastAccessDate: Int?
+    val lastAccessDate: Long?
 )

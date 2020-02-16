@@ -1,4 +1,4 @@
-package com.example.sofuser.view
+package com.example.sofuser.view.main
 
 import androidx.lifecycle.Observer
 import com.example.sofuser.model.User
