@@ -9,8 +9,8 @@ interface RestApi {
 
     @GET("users")
     fun getListUser(
-        @Query(ApiKey.PAGE) page: Int?,
-        @Query(ApiKey.PAGESIZE) pageSize: Int? = 10,
-        @Query(ApiKey.SITE) site: String? = "stackoverflow"
+        @Query(ApiKey.PAGE) page: Int,
+        @Query(ApiKey.PAGESIZE) pageSize: Int = 30,
+        @Query(ApiKey.SITE) site: String = "stackoverflow"
     ): Call<BaseEntity<ArrayList<UserEntity>>>
 }

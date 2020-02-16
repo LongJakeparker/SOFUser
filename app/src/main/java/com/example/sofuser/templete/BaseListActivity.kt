@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_base_list.*
 
 abstract class BaseListActivity: BaseActivity(), BaseListContract.View, ItemRecyclerClickListener {
 
-    protected var mPageLimitNumber = 10
+    protected var mPageLimitNumber = 30
     private lateinit var mLoadMoreListener: LoadMoreOnScrollListener
     protected lateinit var mAdapter: BaseRecyclerAdapter
     private var mLoadMoreIndex = 0
