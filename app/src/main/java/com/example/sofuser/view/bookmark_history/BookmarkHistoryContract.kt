@@ -1,13 +1,12 @@
-package com.example.sofuser.view.reputation_history
+package com.example.sofuser.view.bookmark_history
 
 import com.example.sofuser.template.BaseListContract
+import com.example.sofuser.template.BaseViewHolder
 
-interface ReputationHistoryContract {
+interface BookmarkHistoryContract {
     interface View : BaseListContract.View {
-
     }
 
     interface UserActionsListener : BaseListContract.UserActionsListener<View> {
-        fun loadData(page: Int, isRefresh: Boolean, isLoadMore: Boolean, userId: Int?)
     }
 }

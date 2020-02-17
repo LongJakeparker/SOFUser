@@ -7,6 +7,8 @@ import com.example.sofuser.mapper.ReputationHistoryEntityMapperImpl
 import com.example.sofuser.mapper.UserEntityMapper
 import com.example.sofuser.mapper.UserEntityMapperImpl
 import com.example.sofuser.repository.*
+import com.example.sofuser.view.bookmark_history.BookmarkHistoryContract
+import com.example.sofuser.view.bookmark_history.BookmarkHistoryPresenter
 import com.example.sofuser.view.main.MainContract
 import com.example.sofuser.view.main.MainPresenter
 import com.example.sofuser.view.reputation_history.ReputationHistoryContract
@@ -15,6 +17,7 @@ import com.example.sofuser.view.reputation_history.ReputationHistoryPresenter
 class Injector constructor(val context: Context) {
     private var mainPresenter: MainContract.UserActionsListener? = null
     private var reputationHistoryPresenter: ReputationHistoryContract.UserActionsListener? = null
+    private var bookmarkHistoryPresenter: BookmarkHistoryContract.UserActionsListener? = null
 
     fun provideMainPresenter(): MainContract.UserActionsListener {
         if (mainPresenter == null) {
@@ -30,6 +33,14 @@ class Injector constructor(val context: Context) {
                 ReputationHistoryPresenter(provideReputationHistoryRepository())
         }
         return reputationHistoryPresenter!!
+    }
+
+    fun provideBookmarkHistoryPresenter(): BookmarkHistoryContract.UserActionsListener {
+        if (bookmarkHistoryPresenter == null) {
+            bookmarkHistoryPresenter =
+                BookmarkHistoryPresenter(provideUserRepository())
+        }
+        return bookmarkHistoryPresenter!!
     }
 
     private fun provideUserRepository(): UserRepository {

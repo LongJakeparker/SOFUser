@@ -3,9 +3,9 @@ package com.example.sofuser.view.reputation_history
 import androidx.lifecycle.Observer
 import com.example.sofuser.model.ReputationHistory
 import com.example.sofuser.repository.ReputationHistoryRepository
-import com.example.sofuser.templete.BasePresenter
-import com.example.sofuser.templete.BaseViewHolder
-import com.example.sofuser.templete.Status
+import com.example.sofuser.template.BasePresenter
+import com.example.sofuser.template.BaseViewHolder
+import com.example.sofuser.template.Status
 
 class ReputationHistoryPresenter constructor(private val reputationHistoryRepository: ReputationHistoryRepository):
     BasePresenter<ReputationHistoryContract.View>(),

@@ -1,4 +1,4 @@
-package com.example.sofuser.templete
+package com.example.sofuser.template
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData

@@ -1,4 +1,4 @@
-package com.example.sofuser.templete
+package com.example.sofuser.template
 
 import android.content.Context
 import android.view.View

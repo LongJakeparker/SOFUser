@@ -1,13 +1,16 @@
-package com.example.sofuser.templete
+package com.example.sofuser.template
 
 import android.content.Context
 import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
-import android.os.PersistableBundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.view.menu.MenuBuilder
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.lifecycle.LifecycleOwner
@@ -17,7 +20,7 @@ import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.CollapsingToolbarLayout
 
 
-abstract class BaseActivity : AppCompatActivity(), Contract.View {
+abstract class BaseActivity : AppCompatActivity(), Contract.View, Toolbar.OnMenuItemClickListener {
     protected var mToolBar: Toolbar? = null
     protected var mCollapsingToolbarLayout: CollapsingToolbarLayout? = null
     protected var appBarLayout: AppBarLayout? = null
@@ -40,6 +43,10 @@ abstract class BaseActivity : AppCompatActivity(), Contract.View {
     }
 
     protected open fun getScreenTitleId(): Int {
+        return 0
+    }
+
+    protected open fun getOptionMenu(): Int {
         return 0
     }
 
@@ -79,10 +86,31 @@ abstract class BaseActivity : AppCompatActivity(), Contract.View {
         } else if (getScreenTitleId() > 0) {
             mCollapsingToolbarLayout?.title = getString(getScreenTitleId())
         }
+
+        showOptionMenu(mToolBar)
     }
 
     protected fun changeToolbarTitle(title: String) {
         mCollapsingToolbarLayout?.title = title
+    }
+
+    private fun showOptionMenu(toolbar: Toolbar?) {
+        if (getOptionMenu() != 0) {
+            toolbar?.menu?.clear()
+            toolbar?.inflateMenu(getOptionMenu())
+            toolbar?.setOnMenuItemClickListener(this)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        if (menu is MenuBuilder) {
+            menu.setOptionalIconsVisible(true)
+        }
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onMenuItemClick(item: MenuItem?): Boolean {
+        return false
     }
 
     protected fun hideSoftInput() {

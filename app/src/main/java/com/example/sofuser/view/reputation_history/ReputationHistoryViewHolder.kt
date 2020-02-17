@@ -2,7 +2,7 @@ package com.example.sofuser.view.reputation_history
 
 import android.view.View
 import com.example.sofuser.model.ReputationHistory
-import com.example.sofuser.templete.BaseViewHolder
+import com.example.sofuser.template.BaseViewHolder
 import com.example.sofuser.util.DateTimeUtil
 import kotlinx.android.synthetic.main.item_reputation_history.view.*
 

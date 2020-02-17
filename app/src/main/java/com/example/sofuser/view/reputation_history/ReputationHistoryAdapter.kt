@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sofuser.R
-import com.example.sofuser.templete.BaseRecyclerAdapter
-import com.example.sofuser.templete.BaseViewHolder
+import com.example.sofuser.template.BaseRecyclerAdapter
+import com.example.sofuser.template.BaseViewHolder
 
 class ReputationHistoryAdapter constructor(layoutManager: RecyclerView.LayoutManager): BaseRecyclerAdapter(layoutManager) {
 

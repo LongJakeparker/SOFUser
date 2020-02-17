@@ -9,8 +9,8 @@ import com.example.sofuser.api.ServiceCallBack
 import com.example.sofuser.entity.response.ReputationHistoryEntity
 import com.example.sofuser.mapper.ReputationHistoryEntityMapper
 import com.example.sofuser.model.ReputationHistory
-import com.example.sofuser.templete.BaseException
-import com.example.sofuser.templete.Resource
+import com.example.sofuser.template.BaseException
+import com.example.sofuser.template.Resource
 
 class ReputationHistoryRepositoryImpl constructor(
     private val apiClient: ApiClient,

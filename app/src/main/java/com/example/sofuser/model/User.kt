@@ -7,4 +7,6 @@ data class User(
     val reputation: Int? = null,
     val location: String? = null,
     val lastAccessDate: Long? = null
-)
+) {
+    var isBookmark = false
+}

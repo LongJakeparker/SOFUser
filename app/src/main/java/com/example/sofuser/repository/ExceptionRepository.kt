@@ -1,6 +1,6 @@
 package com.example.sofuser.repository
 
-import com.example.sofuser.templete.BaseException
+import com.example.sofuser.template.BaseException
 
 interface ExceptionRepository {
 

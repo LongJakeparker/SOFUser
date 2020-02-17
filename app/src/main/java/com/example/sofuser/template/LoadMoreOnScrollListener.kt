@@ -1,4 +1,4 @@
-package com.example.sofuser.templete
+package com.example.sofuser.template
 
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager

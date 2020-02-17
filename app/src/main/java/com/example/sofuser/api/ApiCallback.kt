@@ -1,7 +1,7 @@
 package com.example.sofuser.api
 
 import com.example.sofuser.repository.ExceptionRepository
-import com.example.sofuser.templete.BaseException
+import com.example.sofuser.template.BaseException
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback

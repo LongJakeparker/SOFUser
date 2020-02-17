@@ -18,12 +18,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:layout_marginStart="@dimen/padding_ms">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvUserName"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size_medium"
             android:textColor="@android:color/black"/>
@@ -55,5 +56,14 @@
             android:textColor="@color/putty"/>
 
     </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bookmark"
+        android:paddingStart="@dimen/padding_ms"
+        android:paddingEnd="@dimen/padding_ms"
+        android:paddingBottom="@dimen/padding_ms"/>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.sofuser.templete
+package com.example.sofuser.template
 
 import android.view.LayoutInflater
 import android.view.View

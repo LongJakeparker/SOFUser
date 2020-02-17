@@ -9,8 +9,8 @@ import com.example.sofuser.api.ServiceCallBack
 import com.example.sofuser.entity.response.UserEntity
 import com.example.sofuser.mapper.UserEntityMapper
 import com.example.sofuser.model.User
-import com.example.sofuser.templete.BaseException
-import com.example.sofuser.templete.Resource
+import com.example.sofuser.template.BaseException
+import com.example.sofuser.template.Resource
 
 class UserRepositoryImpl constructor(
     private val apiClient: ApiClient,

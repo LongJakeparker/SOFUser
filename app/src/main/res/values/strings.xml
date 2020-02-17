@@ -3,7 +3,9 @@
     <string name="message_network_connection_failed">Please check your network and try again.</string>
     <string name="title_user_list">Users</string>
     <string name="title_reputation_history">Reputation history</string>
+    <string name="title_bookmark_users">Bookmark users</string>
     <string name="format_last_access">Last access: %s</string>
     <string name="label_post_id">Post: </string>
-    <string name="label_creation_date">Created at: </string>
+    <string name="label_creation_date">Created at:\u0020</string>
+    <string name="title_menu_bookmark">Bookmark history</string>
 </resources>

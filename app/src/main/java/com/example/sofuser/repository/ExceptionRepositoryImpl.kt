@@ -2,7 +2,7 @@ package com.example.sofuser.repository
 
 import android.content.Context
 import com.example.sofuser.R
-import com.example.sofuser.templete.BaseException
+import com.example.sofuser.template.BaseException
 import retrofit2.HttpException
 import java.net.ConnectException
 

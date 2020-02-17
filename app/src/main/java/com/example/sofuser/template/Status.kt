@@ -1,4 +1,4 @@
-package com.example.sofuser.templete
+package com.example.sofuser.template
 
 /**
  * Status of a resource that is provided to the UI.

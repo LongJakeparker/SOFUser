@@ -1,4 +1,4 @@
-package com.example.sofuser.templete
+package com.example.sofuser.template
 
 import com.google.gson.annotations.SerializedName
 import java.lang.Exception

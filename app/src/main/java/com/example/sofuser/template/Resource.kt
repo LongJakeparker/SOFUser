@@ -1,4 +1,4 @@
-package com.example.sofuser.templete
+package com.example.sofuser.template
 
 /**
  * A generic class that holds a value with its loading status.
